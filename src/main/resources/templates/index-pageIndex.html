@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>index</title>
+    <script src="/song/js/package/jquery3.2.1.js"></script>
+
+    <link rel="stylesheet" href="/song/css/general/general.css">
+    <link rel="stylesheet" href="/song/css/animation/my-animation.css">
+    <link rel="stylesheet" href="/song/css/general/general.css">
+    <link rel="stylesheet" href="/song/css/general/my-button.css">
+    <link rel="stylesheet" href="/song/css/general/my-ul.css">
+    <link rel="stylesheet" href="/song/css/general/my-title.css">
+    <link rel="stylesheet" href="/song/css/general/my-wrap.css">
+    <link rel="stylesheet" href="/song/css/general/my-carousel.css">
+
+    <link rel="stylesheet" href="/song/css/position/my-fixed.css">
+    <link rel="stylesheet" href="/song/css/position/my-alsoluate.css">
+    <link rel="stylesheet" href="/song/css/position/my-relative.css">
+    <link rel="stylesheet" href="/song/css/display/my-flex.css">
+
+    <link rel="stylesheet" href="/song/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/song/css/page/index.css">
+    <link rel="stylesheet" href="/song/css/page/my-model.css">
+
+
+</head>
+<body>
+<div class="mian-body fixed fixed-size-all" style="background: #ffaf82">
+    <div class="mian-body-items my-absolute my-absolute-size-all">
+        <div class="top-bar my-flex my-flex-space-evenly">
+            <a href=""><img src="https://y.gtimg.cn/mediastyle/yqq/img/logo.png?nowebp=1" alt="QQ音乐logo"></a>
+            <nav>
+                <ul id="top-choose-pages" class="top-choose-pages my-flex my-flex-center-all">
+                    <li class="top-page-default top-page-choose" onclick="selectPage(1)"><a
+                            href="javascript:void(0);"><span>音乐库</span></a></li>
+                    <li class="top-page-default" onclick="selectPage(2)"><a href="javascript:void(0);"><span>我的音乐</span></a>
+                    </li>
+                    <li class="top-page-default" onclick="selectPage(3)"><a
+                            href="javascript:void(0);"><span>暂定</span></a></li>
+                </ul>
+            </nav>
+
+
+            <div class="top-search">
+                <input id="top-search" type="text" placeholder="搜索音乐，用户">
+                <span class="fa fa-search"></span>
+            </div>
+
+            <div class="top-user-manager">
+                <button class="my-button1">登录</button>
+                <button class="my-button1">注册</button>
+            </div>
+            <div class="top-pay">
+                <button class="my-button2"><small>开通VIP</small></button>
+            </div>
+        </div>
+        <div class="mian-body-pages">
+            <div id="page-index" class="main-body-page main-body-page-select">
+                <h2>首页</h2>
+                <nav class="my-flex my-flex-center-all">
+                    <ul class="my-flex my-flex-center-all my-ul">
+                        <li class="li-select" onclick="shwoIndexPage(1,500)"><a
+                                href="javascript:void(0);"><span>首页</span></a></li>
+                        <li onclick="shwoIndexPage(2,500)"><a href="javascript:void(0);"><span>歌手</span></a></li>
+                        <li onclick="shwoIndexPage(3,500)"><a href="javascript:void(0);"><span>排行榜</span></a></li>
+                        <li onclick="shwoIndexPage(4,500)"><a href="javascript:void(0);"><span>MV</span></a></li>
+                    </ul>
+                </nav>
+                <div id="page-index-index" class="main-body-page main-body-page-select">
+                    真正的首页
+                    <div class="my-warp-gray index-content-wrap">
+                        <h2 class="my-h2"><strong>歌单推荐</strong></h2>
+                        <nav class="my-flex my-flex-center-all">
+                            <ul class="my-flex my-flex-center-all my-ul-middle">
+                                <li class="li-select" onclick=""><a href="javascript:void(0);"><span>为你推荐</span></a>
+                                </li>
+                                <li onclick=""><a href="javascript:void(0);"><span>官方歌曲</span></a></li>
+                                <li onclick=""><a href="javascript:void(0);"><span>古风</span></a></li>
+                                <li onclick=""><a href="javascript:void(0);"><span>经典</span></a></li>
+                                <li onclick=""><a href="javascript:void(0);"><span>情歌</span></a></li>
+                                <li onclick=""><a href="javascript:void(0);"><span>网络歌曲</span></a></li>
+                            </ul>
+                        </nav>
+                        <div class="my-carousel my-flex my-flex-space-around">
+                            <svg t="1565682658994" class="icon my-carousel-control" viewBox="0 0 1024 1024"
+                                 version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1450" width="150" height="150">
+                                <path d="M888.5 63.5h-753c-39.8 0-72 32.2-72 72v753.1c0 39.8 32.2 72 72 72h753.1c39.8 0 72-32.2 72-72V135.5c-0.1-39.8-32.3-72-72.1-72zM616.4 706.7c14.5 13.6 15.2 36.4 1.6 50.9s-36.4 15.2-50.9 1.6l-235.8-221C324.1 531.5 320 522 320 512s4.1-19.5 11.4-26.3l235.8-221c14.5-13.6 37.3-12.9 50.9 1.6 13.6 14.5 12.9 37.3-1.6 50.9L408.7 512l207.7 194.7z"
+                                      p-id="1451" fill="rgb(236,236,236)"></path>
+                            </svg>
+                            <!-- <div class="my-carousel-control">左边</div>-->
+                            <div class="my-carousel-main">
+                                <div id="my-carousel-main-items1"
+                                     class="my-carousel-main-items-wrap my-carousel-main-items-select">
+                                    <div class="my-carousel-main-items  my-flex my-flex-space-around">
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="my-carousel-main-items2"
+                                     class="my-carousel-main-items-wrap">
+                                    <div class="my-carousel-main-items  my-flex my-flex-space-around">
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="my-carousel-main-items3"
+                                     class="my-carousel-main-items-wrap">
+                                    <div class="my-carousel-main-items  my-flex my-flex-space-around">
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="my-carousel-main-item">
+                                            <div class="carousel-img-warp my-relative">
+                                                <img src="//p.qpic.cn/music_cover/KetjXWSVppvyrVJfzfdpib7h4y5EdwZSdvT98KLWopcpBzU51tIEwHw/300?n=1"
+                                                     alt="">
+                                                <div class="carousel-img-cover my-absolute my-absolute-size-all my-flex my-flex-center-all">
+                                                    <svg t="1565684939209" class="icon" viewBox="0 0 1024 1024"
+                                                         version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4599"
+                                                         width="150" height="150">
+                                                        <path d="M298.666667 247.04V682.666667a42.666667 42.666667 0 0 1-85.333334 0V170.666667a42.666667 42.666667 0 0 1 65.024-36.352l554.666667 341.333333a42.666667 42.666667 0 0 1 0 72.704l-554.666667 341.333333a42.666667 42.666667 0 0 1-44.714666-72.704L729.258667 512 298.666667 247.04z"
+                                                              p-id="4600" fill="#ffffff"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <p class="my-p">
+                                                    休憩一刻，游弋到梦境的边缘
+                                                </p>
+                                                <span class="my-footer-text my-title-color">
+                                            播放量:<span>4567</span>
+                                        </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <svg t="1565682921775" class="icon my-carousel-control" viewBox="0 0 1024 1024"
+                                 version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2635" width="150" height="150">
+                                <path d="M888 64H136q-30.016 0-51.008 20.992T64 136v752.992q0 28.992 20.992 50.496t51.008 21.504h752.992q28.992 0 50.496-21.504t21.504-50.496V136q0-30.016-21.504-51.008T888 64z m-193.984 474.016l-236 220.992q-11.008 10.016-26.016 9.504t-24.992-11.008-9.504-25.504 10.496-24.992L616 512l-208-195.008q-10.016-10.016-10.496-24.992t9.504-26.016 24.992-11.488 26.016 10.496l236 220.992q11.008 10.016 11.008 26.016t-11.008 26.016z"
+                                      p-id="2636" fill="rgb(236,236,236)"></path>
+                            </svg>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div id="page-index-singer" class="main-body-page">
+                    真正的歌手页面
+                </div>
+                <div id="page-index-songRanger" class="main-body-page">
+                    真正的排行榜页面
+                </div>
+                <div id="page-index-mv" class="main-body-page">
+                    真正的MV界面
+                </div>
+            </div>
+            <div id="page-user" class="main-body-page ">我的音乐</div>
+            <div id="page-search" class="main-body-page">搜索页面</div>
+        </div>
+
+    </div>
+    <!--<div class="mian-body-items my-absolute">search</div>
+    <div class="mian-body-items my-absolute">user</div>-->
+</div>
+<script src="/song/js/model/model.js"></script>
+<script src="/song/js/index/top-bar.js"></script>
+<script src="/song/js/index/page-index.js"></script>
+<script src="/song/js/search/search.js"></script>
+<script src="/song/js/general/my-ul.js"></script>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

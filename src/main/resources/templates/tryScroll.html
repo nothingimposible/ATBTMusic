@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>歌词同步</title>
+    <style>
+        body {
+            background:url("/img/unlogin.jpg") center no-repeat ;
+            background-size:60% 100%;
+        }
+        * {
+            margin:0 auto;
+            padding:0;
+        }
+        .play {
+            color: #a6f12e;
+            font-size: 24px;
+        }
+ 
+        .overPlay {
+            font-size: inherit;
+            color: darkgray;
+        }
+ 
+        #div_lrc {
+            position: absolute;
+            padding-top: 0px;
+            left: 28%;
+            top: 300px;
+            width:50%;
+            transition: top .5s;
+            margin: 0 auto;
+            
+        }
+ 
+        .div_DisLrc {
+            overflow: hidden;
+            color:#246314;
+            width: 70%;
+            height: 600px;  
+            position: relative;
+            margin: 0 auto;
+            
+        }
+ 
+        #audio {
+            width: 100%;
+        }
+ 
+        .div_audio {
+            width: 50%;
+            margin: 0 auto;
+        }
+ 
+        .div_but {
+            position: absolute;
+            font-size: 26px;
+            font-weight: 900;
+            top: 40%;
+            right: 0%;
+        }
+ 
+            .div_but p {
+                cursor: pointer;
+            }
+    </style>
+    <link href="CSS/iconfont.css" rel="stylesheet" />
+</head>
+ 
+ 
+ 
+<body>
+    <div id="div_1" style="display: none;">
+    </div>
+    <!-- 歌词显示界面 -->
+    <div class="div_DisLrc">
+        <div id="div_lrc">
+            <p id="lrc_row1"></p>
+        </div>
+        <!-- 用于调整歌词位置 -->
+        <div class="div_but">
+            <p οnmοusedοwn="time = setInterval(btn_down,0)" οnmοuseup="clearInterval
+(time)"><i class="iconfont icon-top"></i></p>
+            <p οnmοusedοwn="time = setInterval(btn_top,0)" οnmοuseup="clearInterval
+(time)"><i class="iconfont icon-down"></i></p>
+        </div>
+    </div>
+    <!-- 播放器控件 -->
+    <div class="div_audio">
+        <audio id="audio" controls="controls" autoplay="autoplay">
+            <source src="http://music.163.com/song/media/outer/url?id=21253947" type="audio/mpeg">
+        </audio>
+    </div>
+ 
+ 
+ 
+    <script src="/js/jquery-2.1.4.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
+	<script src="text/script" charset="UTF-8"></script>
+    <script>
+        var position = null;
+        var audio = document.getElementById("audio");
+        var play = $("#lrc_row1");
+        //将歌词添加到div中
+        $(document).ready(function () {
+            //加载歌词
+            $('#div_1').load("/songWords/1566445885113.txt");
+            //获取所有歌词
+            setTimeout(function () {
+                var lrcArr = $("#div_1").text().split('\n');
+				/* var lrcArr = lrcArr1.split('\n'); */
+
+                for (var i = 0; i < lrcArr.length; i++) {
+                    var p = document.createElement("p");
+                    position = lrcArr[0].indexOf("]");
+                    console.log("position="+position);
+                    //空白歌词不进行加载
+                    if (lrcArr[i].substring(position+1).trim() != "") {
+                        p.innerText = lrcArr[i].substring(position+1);
+                        $("#div_lrc").append(p);
+                    }
+                }
+            }, 200)
+        })
+ 
+        function lrcDisplay() {
+            //获取播放进度(转换的格式为: 00:00)
+            var minute = parseInt(audio.currentTime / 60);//分钟
+            minute = minute == 0 ? "00" : (minute + "").length < 2 ? "0" + minute : minute;
+            //获取秒数
+            var second = (parseInt(audio.currentTime)) % 60;
+            second = second == 0 ? "00" : (second + "").length < 2 ? "0" + second : second;
+            //正则表达匹配歌词
+            var regex = new RegExp('\\[' + (minute + ":" + second) + '.+\\].+\n');
+            var text = regex.exec($("#div_1").text());
+            console.log("text[0]="+text[0]);
+            if (text != null) {
+                var str1 = new String($(play).next().text());
+                var len = text[0].indexOf("]");
+                var str2 = new String(text[0].substring(len+1));
+                console.log("没进");
+                console.log("str1="+str1.trim()+" "+str1.trim().length);
+                console.log("str2="+str2.trim()+" "+str2.trim().length);
+                if (str1.trim() == str2.trim()) {
+                    console.log("进了");
+                    //歌词颜色变色
+                    $(play).attr("class", "overPlay");
+                    play = $(play).next();
+                    $(play).attr("class", "play");
+                    //歌词滚动(自动)
+                    var top = parseInt($("#div_lrc").css("top"));
+                    $("#div_lrc").css("top", -1 * ((-1 * top) + 22) + "px");
+                }
+            }
+        }
+        setInterval(lrcDisplay, 500);
+        //歌词滚动(手动)
+        var time = null;
+        function btn_top() {
+            var top = parseInt($("#div_lrc").css("top"));
+            $("#div_lrc").css("top", -1 * ((-1 * top) + 100) + "px");
+        }
+        function btn_down() {
+            var top = parseInt($("#div_lrc").css("top"));
+            if (top <= 0)
+                $("#div_lrc").css("top", -1 * ((-1 * top) - 100) + "px");
+        }
+ 
+        //调整歌词位置的函数
+        function btn_top() {
+            var top = parseInt($("#div_lrc").css("top"));
+            $("#div_lrc").css("top", -1 * ((-1 * top) + 30) + "px");
+        }
+        /*
+            1.歌词文件不能是默认编码(记事本文件和lrc文件默认为ANSI编码) 只需要改为 UTF-8或
+者GB2312,否则乱码
+            2.歌曲因为没有算毫秒差距,可能出现细微误差
+            3.因为网页同源策略的原因,外部直接打开html文件只能用firefox访问,
+               不能进行跨域访问,如果不使用文件读取可以在任意地方打开.
+            4.因为ajax识别原因,会把空格当做分割内容,即歌词文件名不能有空格
+            5.因为js对文件操作以及ajax请求存在诸多默认限制,若以类似方法在winfrom asp等中很
+多问题都会得到解决.
+            6.setTimeout()和setInterval()，在浏览器窗口非激活的状态下会停止工作或者以极慢的
+速度工作。目前我已知就IE不会有这种问题。
+        */
+    </script>
+</body>
+</html>

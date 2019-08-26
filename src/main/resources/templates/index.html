@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>index</title>
+    <script src="/song/js/package/jquery3.2.1.js"></script>
+    <link rel="stylesheet" href="/song/css/animation/my-animation.css">
+    <link rel="stylesheet" href="/song/css/general/general.css">
+    <link rel="stylesheet" href="/song/css/position/my-fixed.css">
+    <link rel="stylesheet" href="/song/css/position/my-alsoluate.css">
+    <link rel="stylesheet" href="/song/css/position/my-relative.css">
+    <link rel="stylesheet" href="/song/css/display/my-flex.css">
+
+    <link rel="stylesheet" href="/song/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/song/css/page/index.css">
+    <link rel="stylesheet" href="/song/css/page/my-model.css">
+
+
+</head>
+<body>
+<div id="my-model" class="my-model fixed fixed-size-all">
+    <!-- 控制model层显示-->
+    <div id="model-items" class="model-wrap my-absolute my-absolute-size-all my-flex my-flex-center-all">
+        <!--控制model-item的定位   居中-->
+        <div id="model-items-login" class="my-relative model-items my-flex my-flex-center-all">
+            <span class="fa fa-close model-close" onclick="showModel(404)"></span>
+            <div style="width: 500px;height: 500px;background: white">
+                <h2>这里是登录 父级div就是存放item项目的地方 父级div要删除</h2>
+                <span class=" fa fa-close" onclick="showModel(2)">注册</span>
+            </div>
+        </div>
+        <div id="model-items-loading" class="my-relative model-items my-flex my-flex-center-all">
+            <span class="fa fa-close model-close" onclick="showModel(404)"></span>
+
+            <div style="width: 500px;height: 500px;background: white">
+                <h2>这里是加载中</h2>
+            </div>
+        </div>
+        <div id="model-items-regist" class="my-relative model-items my-flex my-flex-center-all">
+            <span class="fa fa-close model-close" onclick="showModel(404)"></span>
+            <div style="width: 500px;height: 500px;background: white">
+
+                <h2>这里是注册</h2>
+                <span class="fa fa-close" onclick="showModel(3)">上传</span>
+            </div>
+        </div>
+        <div id="model-items-upload" class="my-relative model-items my-flex my-flex-center-all">
+            <span class="fa fa-close model-close" onclick="showModel(404)"></span>
+
+            <div style="width: 500px;height: 500px;background: white">
+                <h2>这里是上传</h2>
+                <span class="fa fa-close" onclick="showModel(1)">登录</span>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--<div class="model-items"></div>
+    <div class="model-items"></div>-->
+</div>
+
+<img id="initImage" style="display: none" src="/song/img/cover-init.jpg" alt="初始化背景图片" class="fixed-size-all my-flex">
+<div id="init-cover" style="display: none" class="fixed fixed-size-all my-flex my-flex-center-all">
+    <div id="init-cover-items" class="init-cover">
+        <img src="/song/img/init-cover-item-logo.png" alt="logo">
+        <h2><Strong>带上你看风景的心情，去聆听</Strong></h2>
+        <h4>青春是执着的，我们勇往直前，从不退缩，只为上路前最初的梦想，我们相约上路，<br>
+            从未停止脚步，只因青春的激情使我们奔腾不息
+            <hr>
+            BRING YOU TO SEE SCENERY OF THE MOOD , TO TRAVRL
+            <br>
+            U 唱音乐
+        </h4>
+
+    </div>
+</div>
+<div class="mian-body fixed fixed-size-all" style="background: red">
+    <div class="mian-body-items my-absolute">index</div>
+    <div class="mian-body-items my-absolute">search</div>
+    <div class="mian-body-items my-absolute">user</div>
+    <div class="mian-body-items my-absolute">model 按钮
+        <button onclick="showModel(1)">登录</button>
+    </div>
+</div>
+<script src="/song/js/model/model.js"></script>
+<script type="text/javascript">
+    function imgLoad(img, callback) {
+        console.log(1);
+        var timer = setInterval(function () {
+            console.log(2);
+            if (img.complete) {
+                callback(img);
+                clearInterval(timer);
+            }
+        }, 50);
+    }
+
+    console.log(3);
+    imgLoad(initImage, function () {
+        console.log(4);
+        $("#initImage").fadeIn(1000, function () {
+            $("#init-cover").fadeIn(1000);
+            $("#init-cover").fadeIn(1000);
+
+
+            /*原本这里是请求ajax，生成首页模板， $(document).ready(function () {}  以后取消放在ajax success方法中*/
+
+            $(document).ready(function () {
+                var time2 = setTimeout(function () {
+                    $("#initImage").addClass("slideInUp");
+                    $("#init-cover").addClass("slideInUp");
+                }, 2000);
+            });
+        });
+
+    });
+</script>
+</body>
+</html>

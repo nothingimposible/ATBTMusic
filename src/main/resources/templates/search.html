@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="js/package/jquery-3.3.1.min.js"></script>
+    <style>
+        body, html {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        ul {
+            list-style: none;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        input[type=text] {
+            outline: none;
+        }
+
+        .positionDiv {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url("img/background/8.jpg");
+            background-size: cover;
+        }
+
+        .disableDiv {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+           padding-top: 15%;
+            overflow: auto;
+        }
+        .disableDiv::-webkit-scrollbar {
+            width: 8px;
+            background-color: transparent;
+        }
+
+        /* track 踪迹；底部颜色 */
+        .disableDiv::-webkit-scrollbar-track {
+        }
+
+        /*thumb 拇指;滑动小块*/
+        .disableDiv::-webkit-scrollbar-thumb {
+            width: 4px;
+            background-color: rgba(230, 230, 230, .9);
+            border-radius: 2px;
+        }
+
+        .disableDiv > .searchDiv {
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(151, 151, 151, .5);
+        }
+
+        .disableDiv > .searchDiv {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+        }
+
+        .search{
+            width: 480px;
+            line-height: 2;
+            font-size: 24px;
+            border-radius: 24px;
+            text-indent: 24px;
+            border: 1px solid rgba(151, 151, 151, .5);
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            -ms-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+        }
+
+        .search:hover, .search:focus {
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+        }
+
+        .resultDiv {
+            position: relative;
+            background: transparent;
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .showResultDiv{
+            position: absolute;
+            width: 30%;
+            display: inline-block;
+            text-align: center;
+        }
+        #result1{
+            top: 0%;
+            left: 5%;
+        }
+        #result2{
+            top: 0%;
+            left: 35%;
+        }
+        #result3{
+            top: 0%;
+            left: 65%;
+        }
+        .showResultDiv{
+            margin: 0px;
+        }
+        .userInfo{
+            background: white;
+            padding: 10px;
+            margin: 20px auto;
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            -ms-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+        }
+        .userInfo:hover{
+            color: white;
+            background: rgba(151,151,151,.5);
+        }
+        .user{
+            padding: 10px;
+        }
+        .user>span{
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .navBar{
+            position: fixed;
+            width: 100%;
+            top: 2%;
+            z-index: 30;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="positionDiv">
+    <div id="disableDiv" class="disableDiv drop">
+        <div class="searchDiv">
+            <h1>EASY-FIND</h1>
+            <input id="search" class="search" type="text" placeholder="input to search user">
+            <h3>create by Mr.D&&Mr.Lee</h3>
+        </div>
+        <div id="result" class="resultDiv">
+            <div id="result1" class="showResultDiv">
+                    <!-- <img src="" alt="头像">-->
+                    <ul class="userInfo">
+                        <li class="user" >用户手机号<span name="phone"></span></li>
+                        <li class="user">开始时间<span name="begin"> </span></li>
+                        <li class="user">结束时间<span name="end"></span></li>
+                        <li class="user">网站网址<span name="web"></span></li>
+                        <li class="user">网站名<span name="webName"></span></li>
+                        <li class="user">总流量<span name="follow"></span></li>
+                    </ul>
+                <ul class="userInfo">
+                    <li class="user" >用户手机号<span name="phone"></span></li>
+                    <li class="user">开始时间<span name="begin"> </span></li>
+                    <li class="user">结束时间<span name="end"></span></li>
+                    <li class="user">网站网址<span name="web"></span></li>
+                    <li class="user">网站名<span name="webName"></span></li>
+                    <li class="user">总流量<span name="follow"></span></li>
+                </ul>
+                <ul class="userInfo">
+                    <li class="user" >用户手机号<span name="phone"></span></li>
+                    <li class="user">开始时间<span name="begin"> </span></li>
+                    <li class="user">结束时间<span name="end"></span></li>
+                    <li class="user">网站网址<span name="web"></span></li>
+                    <li class="user">网站名<span name="webName"></span></li>
+                    <li class="user">总流量<span name="follow"></span></li>
+                </ul>
+                <ul class="userInfo">
+                    <li class="user" >用户手机号<span name="phone"></span></li>
+                    <li class="user">开始时间<span name="begin"> </span></li>
+                    <li class="user">结束时间<span name="end"></span></li>
+                    <li class="user">网站网址<span name="web"></span></li>
+                    <li class="user">网站名<span name="webName"></span></li>
+                    <li class="user">总流量<span name="follow"></span></li>
+                </ul>
+            </div>
+            <div id="result2" class="showResultDiv">
+                <!-- <img src="" alt="头像">-->
+                <ul class="userInfo">
+                    <li class="user" >用户手机号<span name="phone"></span></li>
+                    <li class="user">开始时间<span name="begin"> </span></li>
+                    <li class="user">结束时间<span name="end"></span></li>
+                    <li class="user">网站网址<span name="web"></span></li>
+                    <li class="user">网站名<span name="webName"></span></li>
+                    <li class="user">总流量<span name="follow"></span></li>
+                </ul>
+                <ul class="userInfo">
+                    <li class="user" >用户手机号<span name="phone"></span></li>
+                    <li class="user">开始时间<span name="begin"> </span></li>
+                    <li class="user">结束时间<span name="end"></span></li>
+                    <li class="user">网站网址<span name="web"></span></li>
+                    <li class="user">网站名<span name="webName"></span></li>
+                    <li class="user">总流量<span name="follow"></span></li>
+                </ul>
+                <ul class="userInfo">
+                    <li class="user" >用户手机号<span name="phone"></span></li>
+                    <li class="user">开始时间<span name="begin"> </span></li>
+                    <li class="user">结束时间<span name="end"></span></li>
+                    <li class="user">网站网址<span name="web"></span></li>
+                    <li class="user">网站名<span name="webName"></span></li>
+                    <li class="user">总流量<span name="follow"></span></li>
+                </ul>
+            </div>
+            <div id="result3" class="showResultDiv">
+                <!-- <img src="" alt="头像">-->
+                <ul class="userInfo">
+                    <li class="user" >用户手机号<span name="phone"></span></li>
+                    <li class="user">开始时间<span name="begin"> </span></li>
+                    <li class="user">结束时间<span name="end"></span></li>
+                    <li class="user">网站网址<span name="web"></span></li>
+                    <li class="user">网站名<span name="webName"></span></li>
+                    <li class="user">总流量<span name="follow"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navBar">
+    <input id="search2"  class="search" type="text" placeholder="input to search user">
+</div>
+<script type="text/javascript">
+    $("#search").on("input",function () {
+        if ($('#search').val() === '') {
+            $("#disableDiv").animate({"padding-top": "15%"}, 500);
+            $(".showResultDiv").fadeOut(1000);
+            setTimeout(c=>{
+                $(".showResultDiv").html("");
+            },1200)
+/*            $("#result1").html("");
+            $("#result2").html("");
+            $("#result3").html("");*/
+        }
+    });
+    $("#search").keypress(function (e) {
+        if (e.which === 13) {
+            //回车时间
+            if ($('#search').val() === '') {
+                $("#disableDiv").animate({"padding-top": "15%"}, 500);
+            } else if ($('#search').val() !== '') {
+                $("#disableDiv").animate({"padding-top": "0%"}, 500);
+                //获取数据
+                $.ajax({
+                    url:"",
+                    data:{"inner":$("#search").val()},
+                    method:"post",
+                    dataType:"json",
+                    success:function (data) {
+                        for (var i = 0; i <data.length; i++) {
+                            var phone=data[i].phone;
+                            var begin=data[i].begin;
+                            var end=data[i].end;
+                            var web=data[i].web;
+                            var webName=data[i].webName;
+                            var follow=data[i].follow;
+                            //模板
+                            var userTemplate= '<ul class="userInfo">\n' +
+                                '                        <li class="user" >用户手机号<span name="phone">"+phone+"</span></li>\n' +
+                                '                        <li class="user">开始时间<span name="begin"> "+begin+"</span></li>\n' +
+                                '                        <li class="user">结束时间<span name="end">"+end+"</span></li>\n' +
+                                '                        <li class="user">网站网址<span name="web">"+web+"</span></li>\n' +
+                                '                        <li class="user">网站名<span name="webName">"+webName+"</span></li>\n' +
+                                '                        <li class="user">总流量<span name="follow">"+follow+"</span></li>\n' +
+                                '                    </ul>';
+                            if((i+1)%3===1){
+                                $("#result1").append(userTemplate);
+                            }else if ((i+1)%3===2) {
+                                $("#result2").append(userTemplate);
+                            }else if ((i+1)%3===3) {
+                                $("#result3").append(userTemplate);
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    });
+    $("#search2").on("input",function () {
+        if ($('#search2').val() === '') {
+            $("#disableDiv").animate({"padding-top": "15%"}, 500);
+            $(".showResultDiv").fadeOut(1000);
+            setTimeout(c=>{
+                $(".showResultDiv").html("");
+            },1200)
+            /*            $("#result1").html("");
+                        $("#result2").html("");
+                        $("#result3").html("");*/
+        }
+    });
+    $("#search2").keypress(function (e) {
+        if (e.which === 13) {
+            //回车时间
+            if ($('#search2').val() === '') {
+                $("#disableDiv").animate({"padding-top": "15%"}, 500);
+            } else if ($('#search2').val() !== '') {
+                $("#disableDiv").animate({"padding-top": "0%"}, 500);
+                //获取数据
+                $.ajax({
+                    url:"",
+                    data:{"inner":$("#search2").val()},
+                    method:"post",
+                    dataType:"json",
+                    success:function (data) {
+                        for (var i = 0; i <data.length; i++) {
+                            var phone=data[i].phone;
+                            var begin=data[i].begin;
+                            var end=data[i].end;
+                            var web=data[i].web;
+                            var webName=data[i].webName;
+                            var follow=data[i].follow;
+                            //模板
+                            var userTemplate= '<ul class="userInfo">\n' +
+                                '                        <li class="user" >用户手机号<span name="phone">"+phone+"</span></li>\n' +
+                                '                        <li class="user">开始时间<span name="begin"> "+begin+"</span></li>\n' +
+                                '                        <li class="user">结束时间<span name="end">"+end+"</span></li>\n' +
+                                '                        <li class="user">网站网址<span name="web">"+web+"</span></li>\n' +
+                                '                        <li class="user">网站名<span name="webName">"+webName+"</span></li>\n' +
+                                '                        <li class="user">总流量<span name="follow">"+follow+"</span></li>\n' +
+                                '                    </ul>';
+                            if((i+1)%3===1){
+                                $("#result1").append(userTemplate);
+                            }else if ((i+1)%3===2) {
+                                $("#result2").append(userTemplate);
+                            }else if ((i+1)%3===3) {
+                                $("#result3").append(userTemplate);
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    });
+</script>
+</body>
+</html>

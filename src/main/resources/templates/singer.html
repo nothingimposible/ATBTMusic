@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>singer</title>
+    <script src="/song/js/package/jquery3.2.1.js"></script>
+
+    <link rel="stylesheet" href="/song/css/general/general.css">
+    <link rel="stylesheet" href="/song/css/animation/my-animation.css">
+    <link rel="stylesheet" href="/song/css/general/general.css">
+    <link rel="stylesheet" href="/song/css/general/my-button.css">
+    <link rel="stylesheet" href="/song/css/general/my-ul.css">
+    <link rel="stylesheet" href="/song/css/general/my-title.css">
+    <link rel="stylesheet" href="/song/css/general/my-wrap.css">
+    <link rel="stylesheet" href="/song/css/general/my-carousel.css">
+    <link rel="stylesheet" href="/song/css/general/my-div.css">
+    <link rel="stylesheet" href="/song/css/general/my-img.css">
+    <link rel="stylesheet" href="/song/css/general/my-paging.css">
+
+
+    <link rel="stylesheet" href="/song/css/position/my-fixed.css">
+    <link rel="stylesheet" href="/song/css/position/my-alsoluate.css">
+    <link rel="stylesheet" href="/song/css/position/my-relative.css">
+    <link rel="stylesheet" href="/song/css/display/my-flex.css">
+
+    <link rel="stylesheet" href="/song/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/song/css/page/index.css">
+    <link rel="stylesheet" href="/song/css/page/my-model.css">
+
+</head>
+<body>
+<div class="mian-body fixed fixed-size-all" style="background: #ffaf82">
+    <div class="mian-body-items my-absolute my-absolute-size-all">
+        <div class="top-bar my-flex my-flex-space-evenly">
+            <a href=""><img src="https://y.gtimg.cn/mediastyle/yqq/img/logo.png?nowebp=1" alt="QQ音乐logo"></a>
+            <nav>
+                <ul id="top-choose-pages" class="top-choose-pages my-flex my-flex-center-all">
+                    <li class="top-page-default top-page-choose" onclick="selectPage(1)"><a
+                            href="javascript:void(0);"><span>音乐库</span></a></li>
+                    <li class="top-page-default" onclick="selectPage(2)"><a href="javascript:void(0);"><span>我的音乐</span></a>
+                    </li>
+                    <li class="top-page-default" onclick="selectPage(3)"><a
+                            href="javascript:void(0);"><span>暂定</span></a></li>
+                </ul>
+            </nav>
+
+
+            <div class="top-search">
+                <input id="top-search" type="text" placeholder="搜索音乐，用户">
+                <span class="fa fa-search"></span>
+            </div>
+
+            <div class="top-user-manager">
+                <button class="my-button1">登录</button>
+                <button class="my-button1">注册</button>
+            </div>
+            <div class="top-pay">
+                <button class="my-button2"><small>开通VIP</small></button>
+            </div>
+        </div>
+        <div class="mian-body-pages">
+            <div id="page-index" class="main-body-page main-body-page-select">
+                <h2>首页</h2>
+                <nav class="my-flex my-flex-center-all">
+                    <ul class="my-flex my-flex-center-all my-ul">
+                        <li class="li-select" onclick="shwoIndexPage(1,500)"><a
+                                href="javascript:void(0);"><span>首页</span></a></li>
+                        <li onclick="shwoIndexPage(2,500)"><a href="javascript:void(0);"><span>歌手</span></a></li>
+                        <li onclick="shwoIndexPage(3,500)"><a href="javascript:void(0);"><span>排行榜</span></a></li>
+                        <li onclick="shwoIndexPage(4,500)"><a href="javascript:void(0);"><span>MV</span></a></li>
+                    </ul>
+                </nav>
+                <div id="page-index-index" class="main-body-page main-body-page-select">
+                    真正的首页
+
+                </div>
+                <div id="page-index-singer" class="main-body-page">
+                    真正的歌手页面
+                    <div class="page-index-singer-topBar my-flex my-flex-center-all">
+                        <div>
+                            <marquee behavior="alternate" direction="down" scrollamount="5"
+                                     onmouseover="this.stop()" onmouseout="this.start()"><h1 class="my-h1">万千歌手
+                                近在眼前</h1>
+                            </marquee>
+                            <div class="my-flex my-flex-space-evenly">
+                                <marquee behavior="" direction="left" scrollamount="5"
+                                         onmouseover="this.stop()" onmouseout="this.start()">
+                                    <h2 class="my-h2">登</h2>
+                                </marquee>
+                                <marquee behavior="" direction="left" scrollamount="5"
+                                         onmouseover="this.stop()" onmouseout="this.start()">
+                                    <h2 class="my-h2">录</h2>
+                                </marquee>
+                                <marquee behavior="" direction="left" scrollamount="5"
+                                         onmouseover="this.stop()" onmouseout="this.start()">
+                                    <h2 class="my-h2">查</h2>
+                                </marquee>
+                                <marquee behavior="" direction="left" scrollamount="5"
+                                         onmouseover="this.stop()" onmouseout="this.start()">
+                                    <h2 class="my-h2">看</h2>
+                                </marquee>
+                                <marquee behavior="" direction="left" scrollamount="5"
+                                         onmouseover="this.stop()" onmouseout="this.start()">
+                                    <h2 class="my-h2">你</h2>
+                                </marquee>
+                                <marquee behavior="" direction="left" scrollamount="5"
+                                         onmouseover="this.stop()" onmouseout="this.start()">
+                                    <h2 class="my-h2">关</h2>
+                                </marquee>
+                                <marquee behavior="" direction="left" scrollamount="5"
+                                         onmouseover="this.stop()" onmouseout="this.start()">
+                                    <h2 class="my-h2">注</h2>
+                                </marquee>
+                                <marquee behavior="" direction="left" scrollamount="5"
+                                         onmouseover="this.stop()" onmouseout="this.start()">
+                                    <h2 class="my-h2">的</h2>
+                                </marquee>
+                                <marquee behavior="" direction="left" scrollamount="5"
+                                         onmouseover="this.stop()" onmouseout="this.start()">
+                                    <h2 class="my-h2">歌</h2>
+                                </marquee>
+                                <marquee behavior="" direction="left" scrollamount="5"
+                                         onmouseover="this.stop()" onmouseout="this.start()">
+                                    <h2 class="my-h2">手</h2>
+                                </marquee>
+                            </div>
+                            <a href="javascript:void(0);" class="my-button3" onclick="showModel(1)">登录</a>
+                        </div>
+                    </div>
+                    <div class="page-index-singer-search my-div-small">
+                        <ul id="singer-list1" class="singer-list  my-ul2 my-flex my-flex-start">
+                            <li class="li-select2"><a href="javascript:;"><span>热门</span></a></li>
+                            <li><a href="javascript:;"><span>A</span></a></li>
+                            <li><a href="javascript:;"><span>B</span></a></li>
+                            <li><a href="javascript:;"><span>C</span></a></li>
+                            <li><a href="javascript:;"><span>D</span></a></li>
+                            <li><a href="javascript:;"><span>E</span></a></li>
+                            <li><a href="javascript:;"><span>F</span></a></li>
+                            <li><a href="javascript:;"><span>G</span></a></li>
+                            <li><a href="javascript:;"><span>H</span></a></li>
+                            <li><a href="javascript:;"><span>I</span></a></li>
+                            <li><a href="javascript:;"><span>J</span></a></li>
+                            <li><a href="javascript:;"><span>K</span></a></li>
+                            <li><a href="javascript:;"><span>L</span></a></li>
+                            <li><a href="javascript:;"><span>M</span></a></li>
+                            <li><a href="javascript:;"><span>N</span></a></li>
+                            <li><a href="javascript:;"><span>O</span></a></li>
+                            <li><a href="javascript:;"><span>P</span></a></li>
+                            <li><a href="javascript:;"><span>Q</span></a></li>
+                            <li><a href="javascript:;"><span>R</span></a></li>
+                            <li><a href="javascript:;"><span>S</span></a></li>
+                            <li><a href="javascript:;"><span>T</span></a></li>
+                            <li><a href="javascript:;"><span>U</span></a></li>
+                            <li><a href="javascript:;"><span>V</span></a></li>
+                            <li><a href="javascript:;"><span>W</span></a></li>
+                            <li><a href="javascript:;"><span>X</span></a></li>
+                            <li><a href="javascript:;"><span>Y</span></a></li>
+                            <li><a href="javascript:;"><span>Z</span></a></li>
+                            <li><a href="javascript:;"><span>#</span></a></li>
+                        </ul>
+                        <ul id="singer-list2" class="singer-list  my-ul2 my-flex my-flex-start">
+                            <li class="li-select2"><a href="javascript:;"><span>全部</span></a></li>
+                            <li><a href="javascript:;"><span>内地</span></a></li>
+                            <li><a href="javascript:;"><span>港台</span></a></li>
+                            <li><a href="javascript:;"><span>欧美</span></a></li>
+                            <li><a href="javascript:;"><span>日本</span></a></li>
+                            <li><a href="javascript:;"><span>韩国</span></a></li>
+                            <li><a href="javascript:;"><span>其他</span></a></li>
+                        </ul>
+                        <ul id="singer-list3" class="singer-list  my-ul2 my-flex my-flex-start">
+                            <li class="li-select2"><a href="javascript:;"><span>全部</span></a></li>
+                            <li><a href="javascript:;"><span>男</span></a></li>
+                            <li><a href="javascript:;"><span>女</span></a></li>
+                            <li><a href="javascript:;"><span>组合</span></a></li>
+
+                        </ul>
+                        <ul id="singer-list4" class="singer-list  my-ul2 my-flex my-flex-start">
+                            <li class="li-select2"><a href="javascript:;"><span>全部</span></a></li>
+                            <li><a href="javascript:;"><span>流行</span></a></li>
+                            <li><a href="javascript:;"><span>嘻哈</span></a></li>
+                            <li><a href="javascript:;"><span>摇滚</span></a></li>
+                            <li><a href="javascript:;"><span>电子</span></a></li>
+                            <li><a href="javascript:;"><span>民谣</span></a></li>
+                            <li><a href="javascript:;"><span>R&B</span></a></li>
+                            <li><a href="javascript:;"><span>民歌</span></a></li>
+                            <li><a href="javascript:;"><span>轻音乐</span></a></li>
+                            <li><a href="javascript:;"><span>爵士</span></a></li>
+                            <li><a href="javascript:;"><span>古典</span></a></li>
+                            <li><a href="javascript:;"><span>乡村</span></a></li>
+                            <li><a href="javascript:;"><span>蓝调</span></a></li>
+                        </ul>
+                    </div>
+                    <div id="singer-hot" class="page-index-singer-hot my-div-middle">
+                        <div class="my-flex my-flex-space-evenly">
+                            <div class="my-img-wrap">
+                                <div class="img-warp">
+                                    <img src="//y.gtimg.cn/music/photo_new/T001R150x150M000001fNHEf1SFEFN.jpg?max_age=2592000"
+                                         alt="">
+                                </div>
+                                <p class="my-img-info">
+                                    GEM邓紫棋
+                                </p>
+                            </div>
+                            <div class="my-img-wrap">
+                                <div class="img-warp">
+                                    <img src="//y.gtimg.cn/music/photo_new/T001R150x150M000001fNHEf1SFEFN.jpg?max_age=2592000"
+                                         alt="">
+                                </div>
+                                <p class="my-img-info">
+                                    邓紫棋
+                                </p>
+                            </div>
+                            <div class="my-img-wrap">
+                                <div class="img-warp">
+                                    <img src="//y.gtimg.cn/music/photo_new/T001R150x150M000001fNHEf1SFEFN.jpg?max_age=2592000"
+                                         alt="">
+                                </div>
+                                <p class="my-img-info">
+                                    邓紫棋
+                                </p>
+                            </div>
+                            <div class="my-img-wrap">
+                                <div class="img-warp">
+                                    <img src="//y.gtimg.cn/music/photo_new/T001R150x150M000001fNHEf1SFEFN.jpg?max_age=2592000"
+                                         alt="">
+                                </div>
+                                <p class="my-img-info">
+                                    邓紫棋
+                                </p>
+                            </div>
+                            <div class="my-img-wrap">
+                                <div class="img-warp">
+                                    <img src="//y.gtimg.cn/music/photo_new/T001R150x150M000001fNHEf1SFEFN.jpg?max_age=2592000"
+                                         alt="">
+                                </div>
+                                <p class="my-img-info">
+                                    邓紫棋
+                                </p>
+                            </div>
+                        </div>
+                        <div class="my-flex my-flex-space-evenly">
+                            <div class="my-img-wrap">
+                                <div class="img-warp">
+                                    <img src="//y.gtimg.cn/music/photo_new/T001R150x150M000001fNHEf1SFEFN.jpg?max_age=2592000"
+                                         alt="">
+                                </div>
+                                <p class="my-img-info">
+                                    邓紫棋
+                                </p>
+                            </div>
+                            <div class="my-img-wrap">
+                                <div class="img-warp">
+                                    <img src="//y.gtimg.cn/music/photo_new/T001R150x150M000001fNHEf1SFEFN.jpg?max_age=2592000"
+                                         alt="">
+                                </div>
+                                <p class="my-img-info">
+                                    邓紫棋
+                                </p>
+                            </div>
+                            <div class="my-img-wrap">
+                                <div class="img-warp">
+                                    <img src="//y.gtimg.cn/music/photo_new/T001R150x150M000001fNHEf1SFEFN.jpg?max_age=2592000"
+                                         alt="">
+                                </div>
+                                <p class="my-img-info">
+                                    邓紫棋
+                                </p>
+                            </div>
+                            <div class="my-img-wrap">
+                                <div class="img-warp">
+                                    <img src="//y.gtimg.cn/music/photo_new/T001R150x150M000001fNHEf1SFEFN.jpg?max_age=2592000"
+                                         alt="">
+                                </div>
+                                <p class="my-img-info">
+                                    邓紫棋
+                                </p>
+                            </div>
+                            <div class="my-img-wrap">
+                                <div class="img-warp">
+                                    <img src="//y.gtimg.cn/music/photo_new/T001R150x150M000001fNHEf1SFEFN.jpg?max_age=2592000"
+                                         alt="">
+                                </div>
+                                <p class="my-img-info">
+                                    邓紫棋
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-div-middle">
+                        <!--这里是歌手分页的目录-->
+                        <div class="my-paging">
+                            <div class="my-paging-show my-flex my-flex-space-evenly">
+                                <ul class="singer-list-ul">
+                                    <li><a href="javascript:void(0);"><span>1</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>2</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>3</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>4</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>5</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>6</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>7</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>8</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>9</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>10</span></a></li>
+                                </ul>
+                                <ul class="singer-list-ul">
+                                    <li><a href="javascript:void(0);"><span>1</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>2</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>3</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>4</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>5</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>6</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>7</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>8</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>9</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>10</span></a></li>
+                                </ul>
+                                <ul class="singer-list-ul">
+                                    <li><a href="javascript:void(0);"><span>1</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>2</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>3</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>4</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>5</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>6</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>7</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>8</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>9</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>10</span></a></li>
+                                </ul>
+                                <ul class="singer-list-ul">
+                                    <li><a href="javascript:void(0);"><span>1</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>2</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>3</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>4</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>5</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>6</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>7</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>8</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>9</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>10</span></a></li>
+                                </ul>
+                                <ul class="singer-list-ul">
+                                    <li><a href="javascript:void(0);"><span>1</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>2</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>3</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>4</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>5</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>6</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>7</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>8</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>9</span></a></li>
+                                    <li><a href="javascript:void(0);"><span>10</span></a></li>
+                                </ul>
+                            </div>
+                            <ul class="my-paging-page my-ul2 my-flex my-flex-center-all">
+                                <li class="my-paging-page-control"><a href="javascript:void(0);"><span>上一页</span></a></li>
+                                <li class="li-select2"><a href="javascript:void(0);"><span>1</span></a></li>
+                                <li><a href="javascript:void(0);"><span>2</span></a></li>
+                                <li><a href="javascript:void(0);"><span>3</span></a></li>
+                                <li><a href="javascript:void(0);"><span>4</span></a></li>
+                                <strong class="my-paging-more">···</strong>
+                                <li class="my-paging-page-control"><a href="javascript:void(0);"><span>下一页</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-index-songRanger" class="main-body-page">
+                    真正的排行榜页面
+                </div>
+                <div id="page-index-mv" class="main-body-page">
+                    真正的MV界面
+                </div>
+            </div>
+            <div id="page-user" class="main-body-page ">我的音乐</div>
+            <div id="page-search" class="main-body-page">搜索页面</div>
+        </div>
+
+    </div>
+    <!--<div class="mian-body-items my-absolute">search</div>
+    <div class="mian-body-items my-absolute">user</div>-->
+</div>
+<script src="/song/js/model/model.js"></script>
+<script src="/song/js/index/top-bar.js"></script>
+<script src="/song/js/index/page-index.js"></script>
+<script src="/song/js/search/search.js"></script>
+<script src="/song/js/general/my-ul.js"></script>
+<script src="/song/js/general/my-carousel.js"></script>
+<script src="/song/js/general/my-paging.js"></script>
+
+</body>
+</html>

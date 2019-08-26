@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>music_control</title>
+    <script src="/song/js/package/vue-2.4.0.js"></script>
+    <link rel="stylesheet" href="/song/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/song/css/odd/index.css">
+    <link rel="stylesheet" href="/song/css/odd/general.css">
+    <style>
+        .flex-father{
+            display: flex;
+            /*//沿着主轴对其：居中*/
+            justify-content: center;
+            /*//沿着交叉轴对齐：居中*/
+            align-items: center;
+        }
+        .music-items{
+            margin: 0 20px;
+        }
+        #bottom-music-control{
+            position: fixed;
+            width: 100%;
+            background: rgba(0,0,0,.9);
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="bottom-music-control" class="flex-father" >
+    <div class="music-items">
+        <button class="item1 fa fa-play-circle"></button>
+        <button class="item1 fa fa-play-circle-o"></button>
+        <button class="item1 fa fa-play-circle"></button>
+    </div>
+    <div class="music-items">
+        <img src="https://p3fx.kgimg.com/stdmusic/20161031/20161031114628275709.jpg" alt="图片" width="60px" height="60px">
+    </div>
+    <div class="music-items">
+        <span id="music-name">小城谣</span>
+
+    </div>
+    <div class="music-items"></div>
+</div>
+<div id="app">
+    
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {}
+    })
+</script>
+</body>
+</html>

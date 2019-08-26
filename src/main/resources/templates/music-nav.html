@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>music-nav</title>
+    <script src="/song/js/package/vue-2.4.0.js"></script>
+    <link rel="stylesheet" href="/song/css/odd/index.css">
+    <link rel="stylesheet" href="/song/css/odd/general.css">
+    <link rel="stylesheet" href="/song/css/odd/top_div.css">
+    <link rel="stylesheet" href="/song/css/odd/top_search.css">
+    <link rel="stylesheet" href="/song/css/odd/cover-init.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <!--fontawsome 最新CDN-->
+    <link rel="stylesheet" href="/song/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="top_div" class="top-div">
+    <span id="logo" class="center center_vertical fa fa-lastfm">U+FM</span>
+    <nav>
+        <ul id="top_ul" class="top_ul">
+            <li class="top_ul_li" id="top_search_btn"><a href="javascript:;"><span class="fa fa-search"></span></a></li>
+            <li class="top_ul_li"><a href=""><span>实时</span></a></li>
+            <li class="top_ul_li"><a href=""><span>音乐</span></a></li>
+            <li class="top_ul_li"><a href=""><span>榜单</span></a></li>
+            <li class="top_ul_li"><a href=""><span>活动</span></a></li>
+            <li class="top_ul_li"><a href=""><span>专题</span></a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul id="top_ul_user" class="top_ul">
+            <li  class="top_ul_li"><a href="" id="join"><span>注册</span></a></li>
+            <li class="top_ul_li"><a href="" id="login" ><span>登录</span></a></li>
+        </ul>
+    </nav>
+</div>
+<div id="top_search" class="top-div">
+    <div class="top-top_search_input_warp">
+        <input type="text" id="top_search_input" class="center center_all" placeholder="搜索音乐...">
+    </div>
+    <nav>
+        <ul class="top_ul">
+            <li  class="top_ul_li"><a href="" ><span class="fa fa-close"></span></a></li>
+            <li  class="top_ul_li"><a href="" ><span class="fa fa-search"></span></a></li>
+        </ul>
+    </nav>
+</div>
+<div id="app">
+    <div style="height: 2000px"></div>
+</div>
+<script>
+    //搜索栏
+    $("#top_search_btn").click(function () {
+        $("#top_search").toggle();
+    });
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {}
+    })
+</script>
+</body>
+</html>

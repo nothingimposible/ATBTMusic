@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <script src="/song/js/package/vue-2.4.0.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <!--fontawsome 最新CDN-->
+    <link rel="stylesheet" href="/song/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        .top{
+            background:crimson;
+            display: flex;
+        }
+        .searchwrap{
+            background: antiquewhite;
+            flex: 2;
+        }
+        .searchwrap>input[type=text]::placeholder{
+            color: crimson;
+        }
+        .searchwrap>input[type=text]{
+            text-indent: 10px;
+            background: antiquewhite;
+            line-height: 1;
+            font-size: 30px;
+            padding: 0px;
+            border: none;
+            margin: 0px;
+            height: 60px;
+            outline: none;
+            width: 100%;
+        }
+        .btn{
+            font-size: 30px;
+            height:60px;
+            max-width: 60px;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="top">
+    <div class="searchwrap"><input type="text" placeholder="搜索音乐..."></div>
+    <button class="btn fa fa-close"></button>
+    <button class="btn fa fa-search"></button>
+</div>
+<div id="app">
+    
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {}
+    })
+</script>
+</body>
+</html>

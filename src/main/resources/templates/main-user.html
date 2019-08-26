@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+    <script src="/song/js/package/jquery3.2.1.js"></script>
+
+    <link rel="stylesheet" href="/song/css/general/general.css">
+    <link rel="stylesheet" href="/song/css/animation/my-animation.css">
+    <link rel="stylesheet" href="/song/css/general/general.css">
+    <link rel="stylesheet" href="/song/css/general/my-button.css">
+    <link rel="stylesheet" href="/song/css/general/my-ul.css">
+    <link rel="stylesheet" href="/song/css/general/my-title.css">
+    <link rel="stylesheet" href="/song/css/general/my-wrap.css">
+    <link rel="stylesheet" href="/song/css/general/my-carousel.css">
+    <link rel="stylesheet" href="/song/css/general/my-div.css">
+    <link rel="stylesheet" href="/song/css/general/my-img.css">
+    <link rel="stylesheet" href="/song/css/general/my-paging.css">
+    <link rel="stylesheet" href="/song/css/general/my-windmills.css">
+    <link rel="stylesheet" href="/song/css/general/my-sidebar.css">
+
+
+    <link rel="stylesheet" href="/song/css/position/my-fixed.css">
+    <link rel="stylesheet" href="/song/css/position/my-alsoluate.css">
+    <link rel="stylesheet" href="/song/css/position/my-relative.css">
+    <link rel="stylesheet" href="/song/css/display/my-flex.css">
+
+    <link rel="stylesheet" href="/song/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/song/css/page/index.css">
+    <link rel="stylesheet" href="/song/css/page/user.css">
+
+    <link rel="stylesheet" href="/song/css/page/my-model.css">
+
+</head>
+<body>
+<div class="mian-body fixed fixed-size-all" style="background:#31c27c">
+    <div id="main-body" class="mian-body-items my-absolute my-absolute-size-all">
+        <div class="top-bar my-flex my-flex-space-evenly">
+            <a href=""><img src="https://y.gtimg.cn/mediastyle/yqq/img/logo.png?nowebp=1" alt="QQ音乐logo"></a>
+            <nav>
+                <ul id="top-choose-pages" class="top-choose-pages my-flex my-flex-center-all">
+                    <li class="top-page-default top-page-choose" onclick="selectPage(1)"><a
+                            href="javascript:void(0);"><span>音乐库</span></a></li>
+                    <li class="top-page-default" onclick="selectPage(2)"><a href="javascript:void(0);"><span>我的音乐</span></a>
+                    </li>
+                    <li class="top-page-default" onclick="selectPage(3)"><a
+                            href="javascript:void(0);"><span>暂定</span></a></li>
+                </ul>
+            </nav>
+
+
+            <div class="top-search">
+                <input id="top-search" type="text" placeholder="搜索音乐，用户">
+                <span class="fa fa-search"></span>
+            </div>
+
+            <div class="top-user-manager">
+                <button class="my-button1">登录</button>
+                <button class="my-button1">注册</button>
+            </div>
+            <div class="top-pay">
+                <button class="my-button2"><small>开通VIP</small></button>
+            </div>
+        </div>
+        <div class="mian-body-pages">
+            <div id="page-index" class="main-body-page main-body-page-select">
+                <h2>首页</h2>
+                <nav class="my-flex my-flex-center-all">
+                    <ul class="my-flex my-flex-center-all my-ul">
+                        <li class="li-select" onclick="shwoIndexPage(1,500)"><a
+                                href="javascript:void(0);"><span>首页</span></a></li>
+                        <li onclick="shwoIndexPage(2,500)"><a href="javascript:void(0);"><span>歌手</span></a></li>
+                        <li onclick="shwoIndexPage(3,500)"><a href="javascript:void(0);"><span>排行榜</span></a></li>
+                        <li onclick="shwoIndexPage(4,500)"><a href="javascript:void(0);"><span>MV</span></a></li>
+                    </ul>
+                </nav>
+                <div id="page-index-index" class="main-body-page main-body-page-select">
+                    真正的首页
+
+                </div>
+                <div id="page-index-singer" class="main-body-page">
+                    真正的歌手页面
+                </div>
+                <div id="page-index-songRanger" class="main-body-page">
+                    真正的排行榜页面
+                </div>
+                <div id="page-index-mv" class="main-body-page">
+                    真正的MV界面
+                </div>
+            </div>
+            <div id="page-user" class="main-body-page ">
+                <div class="page-user-unlogin my-flex my-flex-center-all">
+                    <div>
+                        <!--<h1 class="my-h1">
+                            私人音乐空间，听我想听的歌
+                        </h1>-->
+                        <div class="my-flex my-flex-space-evenly">
+                            <marquee behavior="scroll" direction="left" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    私
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="left" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    人
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="left" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    音
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="left" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    乐
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="left" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    空
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="left" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    间
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="left" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    ，
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="right" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    听
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="right" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    我
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="right" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    想
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="right" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    听
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="right" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    的
+                                </h1>
+                            </marquee>
+                            <marquee behavior="scroll" direction="right" width="48px" scrollamount="5">
+                                <h1 class="my-h1">
+                                    歌
+                                </h1>
+                            </marquee>
+                        </div>
+                        <marquee behavior="scroll" direction="down" height="48px" scrollamount="5">
+                            <h2 class="my-h2">
+                                登录管理我的音乐，多终端同步
+                            </h2>
+                        </marquee>
+                        <!--onclick="showModel(1)"-->
+                        <button class="my-button3" onclick="ajaxControl(1)">登录</button>
+                    </div>
+                </div>
+                <div class="page-user-login">
+                    <div class="page-user-login-topBar">
+                        <div id="page-user-login-info" class="my-div-middle">
+                            <div class="img-warp my-flex my-flex-center-all">
+                                <img src="/song/img/head/headunlogin.png" alt="用户头像">
+                            </div>
+                            <h3 class="my-h3">未登录</h3>
+                            <ul class="my-ul my-flex my-flex-center-all">
+                                <li>
+                                    <a href="javascript:void(0);"><span id="focus">0</span></a>
+                                    <h6>关注</h6>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><span id="fans">0</span></a>
+                                    <h6>粉丝</h6>
+                                </li>
+                            </ul>
+                            <ul id="page-user-windmills-1" class="my-ul my-flex my-flex-start">
+                                <li onclick="ajaxControl(1)" class="my-windmill-bar li-select"><a
+                                        href="javascript:void(0);"><span>我喜欢</span></a>
+                                </li>
+                                <li class="my-windmill-bar"><a href="javascript:void(0);"><span>我创建的歌单</span></a></li>
+                                <li class="my-windmill-bar"><a href="javascript:void(0);"><span>关注</span></a></li>
+                                <li class="my-windmill-bar"><a href="javascript:void(0);"><span>粉丝</span></a></li>
+                                <li class="my-windmill-bar"><a href="javascript:void(0);"><span>我上传的视频</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="my-div-larger">
+                        <div id="page-user-windmills-11" class="my-windmills my-div-middle">
+                            <div class="my-windmill my-windmill-select">
+
+                                <ul id="page-user-windmills-2" class="my-ul my-flex my-flex-start">
+                                    <li class="li-select my-windmill-bar"><a
+                                            href="javascript:void(0);"><span>歌曲</span><span>57</span></a></li>
+                                    <li class="my-windmill-bar"><a
+                                            href="javascript:void(0);"><span>歌单</span><span>1</span></a></li>
+                                    <li class="my-windmill-bar"><a
+                                            href="javascript:void(0);"><span>专辑</span><span>2</span></a></li>
+                                    <li class="my-windmill-bar"><a
+                                            href="javascript:void(0);"><span>视频</span><span>0</span></a></li>
+                                </ul>
+                                <div id="page-user-windmills-22">
+                                    <div class="my-windmill my-windmill-select">
+                                        <ul class="my-ul2 my-flex my-flex-start">
+                                            <li class="li-select2"><a href="javascript:void(0);"><span
+                                                    class="fa fa"></span><span>播放全部</span></a></li>
+                                            <li><a href="javascript:void(0);"><span
+                                                    class="fa fa"></span><span>添加到</span></a></li>
+                                            <li><a href="javascript:void(0);"><span
+                                                    class="fa fa"></span><span>下载</span></a></li>
+                                            <li><a href="javascript:void(0);"><span
+                                                    class="fa fa"></span><span>批量处理</span></a></li>
+                                        </ul>
+                                        <ul class="my-ul-super-header">
+                                            <li class="my-ul-super-header my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start">歌曲</div>
+                                                <div class="my-flex my-flex-start">歌手</div>
+                                                <div class="my-flex my-flex-start">专辑</div>
+                                                <div class="my-flex my-flex-start">时长</div>
+                                            </li>
+                                        </ul>
+                                        <ul class="my-ul-super">
+
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                            <li class="my-flex my-flex-space-evenly">
+                                                <div class="my-flex my-flex-start"> MV 体面《前任3》</div>
+                                                <div class="my-flex my-flex-start">于文文</div>
+                                                <div class="my-flex my-flex-start">体面</div>
+                                                <div class="my-flex my-flex-start">04:42</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="my-windmill">小分页2</div>
+                                    <div class="my-windmill">小分页3</div>
+                                    <div class="my-windmill">小分页4</div>
+                                </div>
+                            </div>
+                            <div class="my-windmill">2</div>
+                            <div class="my-windmill">3</div>
+                            <div class="my-windmill">4</div>
+                            <div class="my-windmill">5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="page-search" class="main-body-page">搜索页面</div>
+        </div>
+    </div>
+    <div class="my-sideBar fixed">
+        <div id="backToTop" class="sideItem my-flex my-flex-center-all">
+            顶部
+        </div>
+    </div>
+</div>
+<script src="/song/js/model/model.js"></script>
+<script src="/song/js/index/top-bar.js"></script>
+<script src="/song/js/index/page-index.js"></script>
+<script src="/song/js/search/search.js"></script>
+<script src="/song/js/general/my-ul.js"></script>
+<script src="/song/js/general/my-carousel.js"></script>
+<script src="/song/js/general/my-paging.js"></script>
+<script src="/song/js/general/my-windmills.js"></script>
+<script src="/song/js/general/my-sidebar.js"></script>
+<script src="/song/js/user/user.js"></script>
+<script src="/song/js/ajax/ajax-function.js"></script>
+
+</body>
+</html>

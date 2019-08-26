@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index-cover-init</title>
+    <script src="/song/js/package/vue-2.4.0.js"></script>
+    <link rel="stylesheet" href="/song/css/odd/general.css">
+    <link rel="stylesheet" href="/song/css/odd/cover-init.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="init-cover" class="cover init-cover">
+    <div id="init-cover-items" class="cover-items">
+        <img src="/song/img/init-cover-item-logo.png" alt="logo">
+        <h2>带上你看风景的心情，去聆听</h2>
+        <h4>青春是执着的，我们勇往直前，从不退缩，只为上路前最初的梦想，我们相约上路，<br>
+        从未停止脚步，只因青春的激情使我们奔腾不息
+            <hr>
+            BRING YOU TO SEE SCENERY OF THE MOOD , TO TRAVRL
+            <br>
+            U 唱音乐
+        </h4>
+
+    </div>
+</div>
+<div id="app">
+
+</div>
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $("#init-cover").addClass("slideInUp");
+        }, 4000)
+
+    });
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {}
+    })
+</script>
+</body>
+</html>

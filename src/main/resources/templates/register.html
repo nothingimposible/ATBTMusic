@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="/song/css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="/song/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/song/css/register.css" />
+		<title></title>
+		<script type="text/javascript" src="/song/js/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+	<body>
+		<div id="register">
+			<div class="left_grid" id="left_grid">
+				<div class="lunbotu" style="display: block;">
+					<img src="/song/img/1.jpg" alt="">
+				</div>
+				<div class="lunbotu">
+					<img src="/song/img/3.jpg" alt="">
+				</div>
+				<div class="lunbotu">
+					<img src="/song/img/2.jpg" alt="">
+				</div>
+				<div class="left_grid_info">
+					<input type="hidden"  id="valueOfImg" name="valueOfImg" value="1">
+					<img src="" class="img-circle col-lg-5 col-md-5 col-sm-5 col-xs-5" id="ImgHead">
+					 <button type="button" class="btn btn-default" id="btnHead">选择头像</button>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" id="DivChooseHead">
+							<img src="/song/img/head/head1.jpg" class="img-circle col-lg-4 col-md-4 col-sm-4 col-xs-4" value="1">
+							<img src="/song/img/head/head2.jpg" class="img-circle col-lg-4 col-md-4 col-sm-4 col-xs-4" value="2">
+							<img src="/song/img/head/head3.jpg" class="img-circle col-lg-4 col-md-4 col-sm-4 col-xs-4" value="3">
+							<img src="/song/img/head/head4.jpg" class="img-circle col-lg-4 col-md-4 col-sm-4 col-xs-4" value="4">
+							<img src="/song/img/head/head5.jpg" class="img-circle col-lg-4 col-md-4 col-sm-4 col-xs-4" value="5">
+							<img src="/song/img/head/head6.jpg" class="img-circle col-lg-4 col-md-4 col-sm-4 col-xs-4" value="6">
+							<img src="/song/img/head/head7.jpg" class="img-circle col-lg-4 col-md-4 col-sm-4 col-xs-4" value="7">
+							<img src="/song/img/head/head8.jpg" class="img-circle col-lg-4 col-md-4 col-sm-4 col-xs-4" value="8">
+							<img src="/song/img/head/head9.jpg" class="img-circle col-lg-4 col-md-4 col-sm-4 col-xs-4" value="9">
+						</div>
+				</div>
+			</div>
+			<div class="right_grid">
+				<div class="right_info">
+					<h2>Register</h2>
+					<p>Vestibulum est nulla, fermentum eget euismod et, tincidunt at dui dolor sit.</p>
+					<div class="input_group">
+						<i class="tubiao"><i class="fa fa-user"></i></i>
+						<input name="user_name" type="text" placeholder="UserName" required/>
+					</div>
+					<div class="input_group">
+						<i class="tubiao"><i class="fa fa-lock"></i></i>
+						<input name="user_password" type="text" placeholder="Password" required/>
+					</div>
+					<div class="input_group" >
+						<i class="tubiao"><i class="fa fa-envelope"></i></i>
+						<input name="user_mail" type="text" placeholder="Eamil" required/>
+					</div>
+					<div class="input_group" style="display: flex;">
+						<i class="tubiao"><i class="fa fa-key"></i></i>
+						<input name="user_code" type="text" placeholder="code" required/>
+						<input style="background-color:#01cd74 ;" type="submit" value="获取验证码" />
+					</div>
+					<div class="radio_check">
+						<i class="tubiao"><i class="fa fa-check"></i></i>
+						choose character：
+						<input type="radio" name="privilege" value="1"/>User
+						<input type="radio" name="privilege" value="4"/>Admin
+				   </div>
+				   <input type="checkbox" name="remember" id="remember" value="" />
+				   <h4>remember me</h4>
+				   <button type="submit" class="submit_btb">Register Now</button>
+			</div>
+		</div>
+				<script type="text/javascript" src="/song/js/register.js"></script>
+		</div>
+	</body>
+</html>
